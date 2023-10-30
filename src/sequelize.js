@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+require('ts-node/register');
 
 import getYArgs from './core/yargs';
 
