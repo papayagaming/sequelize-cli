@@ -47,12 +47,7 @@ const api = {
       return path.resolve(process.cwd(), args.config);
     }
 
-    const defaultPath = path.resolve(process.cwd(), 'config', 'config.json');
-    const alternativePath = defaultPath.replace('.json', '.js');
-
-    return helpers.path.existsSync(alternativePath)
-      ? alternativePath
-      : defaultPath;
+    return path.resolve(process.cwd(), 'config', 'config.ts');
   },
 
   relativeConfigFile() {
